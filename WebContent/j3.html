@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style></style>
+<script>
+setTimeout(function(){  
+    location.href='http://www.naver.com';
+    
+},5000);
+
+
+function start(){
+    var h1 = document.querySelector('#h1');
+    var h2 = document.querySelector('#h2');
+    var h3 = document.querySelector('#h3');
+    var s1 = setInterval(function(){
+            h1.innerHTML = h1.innerHTML + "*";
+
+    },800);
+    var s2 = setInterval(function(){
+            h2.innerHTML = h2.innerHTML + "*";
+
+    },500);
+    var s3 = setInterval(function(){
+            h3.innerHTML = h3.innerHTML + "*";
+
+    },1000);
+
+    setTimeout(function(){
+        clearInterval(s1);
+        clearInterval(s2);
+        clearInterval(s3);
+    },3000);
+};
+</script>
+</head>
+<body>
+<button onclick="start();">click</button>
+<h3 id="h1"></h3>
+<h3 id="h2"></h3>
+<h3 id="h3"></h3>
+</body>
+</html>

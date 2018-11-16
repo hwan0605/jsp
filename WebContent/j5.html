@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style></style>
+<script>
+function check(){
+    var exp = /^[0-9]+$/;
+    var pn = document.querySelector('#pn').value;
+    if(pn.match(exp)){
+        return true;
+
+    }
+    else{
+        alert('Miss Math');
+        document.querySelector('#pn').focus();
+        
+
+    };
+};
+</script>
+</head>
+<body>
+<form>
+    Phone Number<input type="text" id="pn">
+    <span></span><br>
+    <button onclick="check();">click</button>
+
+
+</form>
+</body>
+</html>
